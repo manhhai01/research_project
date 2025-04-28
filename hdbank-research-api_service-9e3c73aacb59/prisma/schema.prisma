@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "linux-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ForecastData {
+  id               Int             @id @default(autoincrement())
+  date             DateTime        @db.Date
+  value            Float
+  type             historydatatype
+  timestamp        DateTime        @db.Date
+  symbolSubModelId Int
+  SymbolModel      SymbolSubModel  @relation(fields: [symbolSubModelId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@unique([date, type, timestamp, symbolSubModelId])
+}
+
+model HistoryData {
+  id        Int             @id @default(autoincrement())
+  type      historydatatype
+  timestamp DateTime        @db.Date
+  close     Float
+  open      Float?
+  high      Float?
+  low       Float?
+  symbolId  Int
+  Symbol    Symbol          @relation(fields: [symbolId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@unique([type, timestamp, symbolId])
+}
+
+model Model {
+  id       Int        @id @default(autoincrement())
+  name     String     @unique @db.VarChar
+  SubModel SubModel[]
+}
+
+model SubModel {
+  id             Int              @id @default(autoincrement())
+  name           String           @unique @db.VarChar
+  modelId        Int
+  Model          Model            @relation(fields: [modelId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  SymbolSubModel SymbolSubModel[]
+
+  @@unique([name, modelId])
+}
+
+model Symbol {
+  id             Int              @id @default(autoincrement())
+  name           String           @unique @db.VarChar
+  HistoryData    HistoryData[]
+  SymbolSubModel SymbolSubModel[]
+}
+
+model SymbolSubModel {
+  id           Int            @id @default(autoincrement())
+  symbolId     Int
+  subModelId   Int
+  ForecastData ForecastData[]
+  SubModel     SubModel       @relation(fields: [subModelId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  Symbol       Symbol         @relation(fields: [symbolId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@unique([symbolId, subModelId])
+}
+
+model LogError {
+  id            Int      @id @default(autoincrement())
+  service_name  String   
+  name          String   
+  message       String   
+  status_code   Int      
+  path          String  
+  timestamp     DateTime @default(now())
+  error_details String?
+}
+
+enum historydatatype {
+  TRADINGVIEW
+  BLOOMBERG
+}

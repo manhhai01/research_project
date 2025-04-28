@@ -1,0 +1,1364 @@
+[2025-04-26 03:05:42 +0000] [73382] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 03:05:42 +0000] [73382] [INFO] Listening at: http://0.0.0.0:8000 (73382)
+[2025-04-26 03:05:42 +0000] [73382] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2025-04-26 03:05:42 +0000] [73383] [INFO] Booting worker with pid: 73383
+[2025-04-26 03:05:42 +0000] [73384] [INFO] Booting worker with pid: 73384
+[2025-04-26 03:05:43 +0000] [73385] [INFO] Booting worker with pid: 73385
+[2025-04-26 03:05:43 +0000] [73386] [INFO] Booting worker with pid: 73386
+[2025-04-26 03:05:43 +0000] [73383] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:43 +0000] [73383] [INFO] Worker exiting (pid: 73383)
+[2025-04-26 03:05:44 +0000] [73384] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:44 +0000] [73384] [INFO] Worker exiting (pid: 73384)
+[2025-04-26 03:05:44 +0000] [73385] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:44 +0000] [73385] [INFO] Worker exiting (pid: 73385)
+[2025-04-26 03:05:44 +0000] [73382] [ERROR] Worker (pid:73383) exited with code 3
+[2025-04-26 03:05:44 +0000] [73382] [ERROR] Worker (pid:73386) was sent SIGTERM!
+[2025-04-26 03:05:44 +0000] [73382] [ERROR] Worker (pid:73385) was sent SIGTERM!
+[2025-04-26 03:05:44 +0000] [73382] [ERROR] Worker (pid:73384) was sent SIGTERM!
+[2025-04-26 03:05:44 +0000] [73382] [ERROR] Shutting down: Master
+[2025-04-26 03:05:44 +0000] [73382] [ERROR] Reason: Worker failed to boot.
+[2025-04-26 03:05:44 +0000] [73422] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 03:05:44 +0000] [73422] [INFO] Listening at: http://0.0.0.0:8000 (73422)
+[2025-04-26 03:05:44 +0000] [73422] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2025-04-26 03:05:44 +0000] [73430] [INFO] Booting worker with pid: 73430
+[2025-04-26 03:05:44 +0000] [73431] [INFO] Booting worker with pid: 73431
+[2025-04-26 03:05:44 +0000] [73435] [INFO] Booting worker with pid: 73435
+[2025-04-26 03:05:44 +0000] [73436] [INFO] Booting worker with pid: 73436
+[2025-04-26 03:05:45 +0000] [73430] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:45 +0000] [73430] [INFO] Worker exiting (pid: 73430)
+[2025-04-26 03:05:45 +0000] [73431] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:45 +0000] [73431] [INFO] Worker exiting (pid: 73431)
+[2025-04-26 03:05:45 +0000] [73435] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:45 +0000] [73435] [INFO] Worker exiting (pid: 73435)
+[2025-04-26 03:05:45 +0000] [73422] [ERROR] Worker (pid:73430) exited with code 3
+[2025-04-26 03:05:45 +0000] [73422] [ERROR] Worker (pid:73431) was sent SIGTERM!
+[2025-04-26 03:05:45 +0000] [73422] [ERROR] Worker (pid:73435) was sent SIGTERM!
+[2025-04-26 03:05:45 +0000] [73422] [ERROR] Worker (pid:73436) was sent SIGTERM!
+[2025-04-26 03:05:45 +0000] [73422] [ERROR] Shutting down: Master
+[2025-04-26 03:05:45 +0000] [73422] [ERROR] Reason: Worker failed to boot.
+[2025-04-26 03:05:45 +0000] [73472] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 03:05:45 +0000] [73472] [INFO] Listening at: http://0.0.0.0:8000 (73472)
+[2025-04-26 03:05:45 +0000] [73472] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2025-04-26 03:05:45 +0000] [73473] [INFO] Booting worker with pid: 73473
+[2025-04-26 03:05:45 +0000] [73477] [INFO] Booting worker with pid: 73477
+[2025-04-26 03:05:45 +0000] [73478] [INFO] Booting worker with pid: 73478
+[2025-04-26 03:05:45 +0000] [73479] [INFO] Booting worker with pid: 73479
+[2025-04-26 03:05:46 +0000] [73473] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:46 +0000] [73473] [INFO] Worker exiting (pid: 73473)
+[2025-04-26 03:05:46 +0000] [73478] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:46 +0000] [73478] [INFO] Worker exiting (pid: 73478)
+[2025-04-26 03:05:46 +0000] [73479] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:46 +0000] [73479] [INFO] Worker exiting (pid: 73479)
+[2025-04-26 03:05:46 +0000] [73477] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:46 +0000] [73477] [INFO] Worker exiting (pid: 73477)
+[2025-04-26 03:05:46 +0000] [73472] [ERROR] Worker (pid:73473) exited with code 3
+[2025-04-26 03:05:46 +0000] [73472] [ERROR] Worker (pid:73478) was sent SIGTERM!
+[2025-04-26 03:05:46 +0000] [73472] [ERROR] Worker (pid:73479) was sent SIGTERM!
+[2025-04-26 03:05:46 +0000] [73472] [ERROR] Worker (pid:73477) was sent SIGTERM!
+[2025-04-26 03:05:47 +0000] [73472] [ERROR] Shutting down: Master
+[2025-04-26 03:05:47 +0000] [73472] [ERROR] Reason: Worker failed to boot.
+[2025-04-26 03:05:47 +0000] [73523] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 03:05:47 +0000] [73523] [INFO] Listening at: http://0.0.0.0:8000 (73523)
+[2025-04-26 03:05:47 +0000] [73523] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2025-04-26 03:05:47 +0000] [73524] [INFO] Booting worker with pid: 73524
+[2025-04-26 03:05:47 +0000] [73527] [INFO] Booting worker with pid: 73527
+[2025-04-26 03:05:47 +0000] [73528] [INFO] Booting worker with pid: 73528
+[2025-04-26 03:05:47 +0000] [73530] [INFO] Booting worker with pid: 73530
+[2025-04-26 03:05:48 +0000] [73524] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:48 +0000] [73524] [INFO] Worker exiting (pid: 73524)
+[2025-04-26 03:05:48 +0000] [73527] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:48 +0000] [73527] [INFO] Worker exiting (pid: 73527)
+[2025-04-26 03:05:48 +0000] [73528] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:48 +0000] [73528] [INFO] Worker exiting (pid: 73528)
+[2025-04-26 03:05:48 +0000] [73530] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:48 +0000] [73530] [INFO] Worker exiting (pid: 73530)
+[2025-04-26 03:05:48 +0000] [73523] [ERROR] Worker (pid:73524) exited with code 3
+[2025-04-26 03:05:48 +0000] [73523] [ERROR] Worker (pid:73527) was sent SIGTERM!
+[2025-04-26 03:05:48 +0000] [73523] [ERROR] Worker (pid:73530) was sent SIGTERM!
+[2025-04-26 03:05:48 +0000] [73523] [ERROR] Worker (pid:73528) was sent SIGTERM!
+[2025-04-26 03:05:48 +0000] [73523] [ERROR] Shutting down: Master
+[2025-04-26 03:05:48 +0000] [73523] [ERROR] Reason: Worker failed to boot.
+[2025-04-26 03:05:48 +0000] [73566] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 03:05:48 +0000] [73566] [INFO] Listening at: http://0.0.0.0:8000 (73566)
+[2025-04-26 03:05:48 +0000] [73566] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2025-04-26 03:05:48 +0000] [73567] [INFO] Booting worker with pid: 73567
+[2025-04-26 03:05:48 +0000] [73570] [INFO] Booting worker with pid: 73570
+[2025-04-26 03:05:48 +0000] [73571] [INFO] Booting worker with pid: 73571
+[2025-04-26 03:05:48 +0000] [73572] [INFO] Booting worker with pid: 73572
+[2025-04-26 03:05:49 +0000] [73567] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:49 +0000] [73567] [INFO] Worker exiting (pid: 73567)
+[2025-04-26 03:05:49 +0000] [73570] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:49 +0000] [73570] [INFO] Worker exiting (pid: 73570)
+[2025-04-26 03:05:49 +0000] [73571] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:49 +0000] [73571] [INFO] Worker exiting (pid: 73571)
+[2025-04-26 03:05:49 +0000] [73566] [ERROR] Worker (pid:73567) exited with code 3
+[2025-04-26 03:05:49 +0000] [73566] [ERROR] Worker (pid:73570) was sent SIGTERM!
+[2025-04-26 03:05:49 +0000] [73566] [ERROR] Worker (pid:73572) was sent SIGTERM!
+[2025-04-26 03:05:49 +0000] [73566] [ERROR] Worker (pid:73571) was sent SIGTERM!
+[2025-04-26 03:05:49 +0000] [73566] [ERROR] Shutting down: Master
+[2025-04-26 03:05:49 +0000] [73566] [ERROR] Reason: Worker failed to boot.
+[2025-04-26 03:05:49 +0000] [73616] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 03:05:49 +0000] [73616] [INFO] Listening at: http://0.0.0.0:8000 (73616)
+[2025-04-26 03:05:49 +0000] [73616] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2025-04-26 03:05:49 +0000] [73617] [INFO] Booting worker with pid: 73617
+[2025-04-26 03:05:50 +0000] [73620] [INFO] Booting worker with pid: 73620
+[2025-04-26 03:05:50 +0000] [73621] [INFO] Booting worker with pid: 73621
+[2025-04-26 03:05:50 +0000] [73622] [INFO] Booting worker with pid: 73622
+[2025-04-26 03:05:50 +0000] [73617] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:50 +0000] [73617] [INFO] Worker exiting (pid: 73617)
+[2025-04-26 03:05:51 +0000] [73621] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:51 +0000] [73621] [INFO] Worker exiting (pid: 73621)
+[2025-04-26 03:05:51 +0000] [73620] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:05:51 +0000] [73620] [INFO] Worker exiting (pid: 73620)
+[2025-04-26 03:05:51 +0000] [73616] [ERROR] Worker (pid:73617) exited with code 3
+[2025-04-26 03:05:51 +0000] [73616] [ERROR] Worker (pid:73621) was sent SIGTERM!
+--- Logging error ---
+[2025-04-26 03:05:51 +0000] [73616] [ERROR] Worker (pid:73622) was sent SIGTERM!
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 208, in run
+    self.sleep()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 359, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/logging/__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/logging/__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 553, in reap_workers
+    self.log.error(msg)
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/glogging.py", line 271, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1568, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1684, in _log
+    self.handle(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1700, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1762, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1028, in handle
+    self.emit(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1168, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1081, in handleError
+    sys.stderr.write('--- Logging error ---\n')
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 553, in reap_workers
+    self.log.error(msg)
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/glogging.py", line 271, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:73621) was sent SIGTERM!'
+Arguments: ()
+[2025-04-26 03:06:21 +0000] [73616] [ERROR] Shutting down: Master
+[2025-04-26 03:06:21 +0000] [73616] [ERROR] Reason: Worker failed to boot.
+[2025-04-26 03:06:21 +0000] [73875] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 03:06:21 +0000] [73875] [INFO] Listening at: http://0.0.0.0:8000 (73875)
+[2025-04-26 03:06:21 +0000] [73875] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2025-04-26 03:06:21 +0000] [73883] [INFO] Booting worker with pid: 73883
+[2025-04-26 03:06:21 +0000] [73885] [INFO] Booting worker with pid: 73885
+[2025-04-26 03:06:21 +0000] [73886] [INFO] Booting worker with pid: 73886
+[2025-04-26 03:06:21 +0000] [73889] [INFO] Booting worker with pid: 73889
+[2025-04-26 03:06:22 +0000] [73883] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:06:22 +0000] [73883] [INFO] Worker exiting (pid: 73883)
+[2025-04-26 03:06:22 +0000] [73885] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:06:22 +0000] [73885] [INFO] Worker exiting (pid: 73885)
+[2025-04-26 03:06:22 +0000] [73886] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:06:22 +0000] [73886] [INFO] Worker exiting (pid: 73886)
+[2025-04-26 03:06:22 +0000] [73889] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:06:22 +0000] [73889] [INFO] Worker exiting (pid: 73889)
+[2025-04-26 03:06:22 +0000] [73875] [ERROR] Worker (pid:73883) exited with code 3
+[2025-04-26 03:06:22 +0000] [73875] [ERROR] Worker (pid:73885) was sent SIGTERM!
+[2025-04-26 03:06:22 +0000] [73875] [ERROR] Worker (pid:73886) was sent SIGTERM!
+[2025-04-26 03:06:22 +0000] [73875] [ERROR] Worker (pid:73889) was sent SIGTERM!
+[2025-04-26 03:06:22 +0000] [73875] [ERROR] Shutting down: Master
+[2025-04-26 03:06:22 +0000] [73875] [ERROR] Reason: Worker failed to boot.
+[2025-04-26 03:06:22 +0000] [73932] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 03:06:22 +0000] [73932] [INFO] Listening at: http://0.0.0.0:8000 (73932)
+[2025-04-26 03:06:22 +0000] [73932] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2025-04-26 03:06:22 +0000] [73933] [INFO] Booting worker with pid: 73933
+[2025-04-26 03:06:22 +0000] [73936] [INFO] Booting worker with pid: 73936
+[2025-04-26 03:06:22 +0000] [73937] [INFO] Booting worker with pid: 73937
+[2025-04-26 03:06:22 +0000] [73939] [INFO] Booting worker with pid: 73939
+[2025-04-26 03:06:23 +0000] [73936] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:06:23 +0000] [73933] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:06:23 +0000] [73936] [INFO] Worker exiting (pid: 73936)
+[2025-04-26 03:06:23 +0000] [73933] [INFO] Worker exiting (pid: 73933)
+[2025-04-26 03:06:23 +0000] [73937] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:06:23 +0000] [73937] [INFO] Worker exiting (pid: 73937)
+[2025-04-26 03:06:23 +0000] [73939] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/main.py", line 3, in <module>
+    from domain.train import controller as train_controller
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 33, in <module>
+    hash_password()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/api/domain/train/controller.py", line 23, in hash_password
+    with open(f"{SHARED_FOLDER}/secret_api.txt", "w") as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../shared/secret_api.txt'
+[2025-04-26 03:06:23 +0000] [73939] [INFO] Worker exiting (pid: 73939)
+[2025-04-26 03:06:23 +0000] [73932] [ERROR] Worker (pid:73933) exited with code 3
+[2025-04-26 03:06:23 +0000] [73932] [ERROR] Worker (pid:73936) exited with code 3
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 208, in run
+    self.sleep()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 359, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+             ^^^^^
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 341, in halt
+    self.stop()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 395, in stop
+    time.sleep(0.1)
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/manhhai01/Desktop/deploy_test_2/deploy_2/hdbank-research-model_service-c9279bfc573f/venv_api/lib/python3.12/site-packages/gunicorn/arbiter.py", line 529, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2025-04-26 03:06:24 +0000] [73977] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 03:06:24 +0000] [73977] [INFO] Listening at: http://0.0.0.0:8000 (73977)
+[2025-04-26 03:06:24 +0000] [73977] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2025-04-26 03:06:24 +0000] [73981] [INFO] Booting worker with pid: 73981
+[2025-04-26 03:06:24 +0000] [73982] [INFO] Booting worker with pid: 73982
+[2025-04-26 03:06:24 +0000] [73983] [INFO] Booting worker with pid: 73983
+[2025-04-26 03:06:24 +0000] [73984] [INFO] Booting worker with pid: 73984
+[2025-04-26 03:06:25 +0000] [73977] [INFO] Handling signal: int
+[2025-04-26 03:06:25 +0000] [73977] [ERROR] Worker (pid:73981) was sent SIGINT!
+[2025-04-26 03:06:25 +0000] [73977] [ERROR] Worker (pid:73983) was sent SIGINT!
+[2025-04-26 03:06:25 +0000] [73977] [ERROR] Worker (pid:73984) was sent SIGINT!
+[2025-04-26 03:06:25 +0000] [73977] [ERROR] Worker (pid:73982) was sent SIGINT!
+[2025-04-26 03:06:25 +0000] [73977] [INFO] Shutting down: Master

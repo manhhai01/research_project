@@ -1,0 +1,9 @@
+/venv
+/venv_api
+/venv_core
+__pycache__/
+*.pyc
+*.pyo
+/shared
+/test
+/shared

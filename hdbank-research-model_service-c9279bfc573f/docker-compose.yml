@@ -1,0 +1,27 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile  # Use the Dockerfile in app1
+    volumes:
+      - ./shared:./app/shared  # Mount shared volume to /app/shared
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+      - "5432:5432"
+    command: fastapi run main.py --host 0.0.0.0 --port 8000
+
+  core:
+    build:
+      context: .
+      dockerfile: ./core/Dockerfile  # Use the Dockerfile in app2
+    volumes:
+      - ./shared:./app/shared  # Mount shared volume to /app/shared
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+      - "5432:5432"
+    command: fastapi run main.py --host 0.0.0.0 --port 8001
+
+volumes:
+  shared:  # Define shared volume
