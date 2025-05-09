@@ -66,20 +66,20 @@ async def websocket_client():
 async def websocket_endpoint(
     websocket: WebSocket, password: str, type: str, db: Session = Depends(get_db)
 ):
-    logger.info("This is test /ws")
-    global LOCK
-    global s3_client
-    if not verify_password(password) or LOCK:
-        await websocket.close()
-        return
-    await websocket.accept()
-    LOCK = True
-    service = Service(type, db)
-    receive_text = await websocket.receive_text()
-    receive_text = receive_text.split("|")
-    await websocket.close()
-    hash_password()
     try:
+        logger.info("This is test /ws")
+        global LOCK
+        global s3_client
+        if not verify_password(password) or LOCK:
+            await websocket.close()
+            return
+        await websocket.accept()
+        LOCK = True
+        service = Service(type, db)
+        receive_text = await websocket.receive_text()
+        receive_text = receive_text.split("|")
+        await websocket.close()
+        hash_password()
         service.model_training()
         service.save_forecast(db)
         # service.save_model(upload_file)

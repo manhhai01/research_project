@@ -1,5 +1,7 @@
 from sqlalchemy.orm import Session
 from model.MLForecast.main import MLForecastModel
+from model.NeuralProphet.main import NeuralProphetModel
+from model.StatsForecast.main import StatsForecastModel
 from database.model import (
     HistoryData,
     HistoryDataType,
@@ -12,6 +14,9 @@ from database.model import (
 import pandas as pd
 from typing import List
 from datetime import date
+from math import isnan
+from datetime import datetime
+
 
 
 class Service:
@@ -61,7 +66,13 @@ class Service:
         self.models = [
             MLForecastModel("VN10Y", self.data["VN10Y"]),
             MLForecastModel("VNINBR", self.data["VNINBR"]),
-            MLForecastModel("USDVND", self.data["USDVND"])
+            MLForecastModel("USDVND", self.data["USDVND"]),
+            NeuralProphetModel("VN10Y", self.data["VN10Y"]),
+            NeuralProphetModel("USDVND", self.data["USDVND"]),
+            NeuralProphetModel("VNINBR", self.data["VNINBR"]),
+            StatsForecastModel("VN10Y", self.data["VN10Y"]),
+            StatsForecastModel("USDVND", self.data["USDVND"]),
+            StatsForecastModel("VNINBR", self.data["VNINBR"])
         ]
         # Training model
         for model in self.models:
@@ -120,6 +131,8 @@ class Service:
                         type="TRADINGVIEW"
                     )
                     for row in data.itertuples(index=False)
+                    if not isnan(row[1])
+
                 ]
                 db.add_all(forecast_entries)
 

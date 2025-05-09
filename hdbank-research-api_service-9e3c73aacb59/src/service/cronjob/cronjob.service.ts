@@ -7,6 +7,13 @@ export class CronJobService {
 
     @Cron(CronExpression.EVERY_DAY_AT_9AM)
     async trainModel(): Promise<void> {
-        await this.modelService.train({ isTradingView: true });
+        console.log(`[CronJobService] Cron job started at ${new Date().toISOString()}`);
+        
+        try {
+            await this.modelService.train({ isTradingView: true });
+            console.log(`[CronJobService] Model training completed at ${new Date().toISOString()}`);
+        } catch (error) {
+            console.error(`[CronJobService] Error during model training:`, error);
+        }
     }
 }

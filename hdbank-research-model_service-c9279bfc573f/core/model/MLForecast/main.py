@@ -55,10 +55,6 @@ class MLForecastModel:
         )
 
     def model_training(self):
-        print(f"Training data sample:\n{self.df.head()}")
-        print(f"Data types:\n{self.df.dtypes}")
-        print(f"Missing values:\n{self.df.isnull().sum()}")
-        print(f"Data length: {len(self.df)}")
         
         if self.df.empty:
             raise ValueError("Preprocessed data is empty!")
@@ -70,7 +66,7 @@ class MLForecastModel:
         self.fcst.save(f"{self.OUTPUT_PATH}/{self.type}.pkl")
         print("Model saved.")
 
-    def model_retrain(self, model=[True, False, False, False], horizon=None):
+    def model_retrain(self, model=[True, False, True, True], horizon=None):
         print(f'Model retrain for {self.model_name}: {self.type}')
         self.data_processing()
         self.models_defined(model, horizon)
